@@ -45,6 +45,7 @@ namespace dotnet_test
             Player.attributes.resistance = 20;
 
             battle.startFight(Player, mGoblin);
+            // alex is a doodoo head
         }
     }
 }
