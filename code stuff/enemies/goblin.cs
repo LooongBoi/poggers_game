@@ -6,7 +6,7 @@ namespace dotnet_test {
 
 
         public goblin(int swordDmg) {
-            enemyWeapon = new sword(swordDmg);
+            enemyWeapon = new sword(swordDmg, "Short Sword");
             enemyHealth = 60;
             enemySpeed = 4;
             enemyPotions = 3;

@@ -10,13 +10,15 @@ namespace dotnet_test
         {
 
             player Player = new player();
-            hpPotion sHealthPotion = new hpPotion(10);
-            hpPotion mHealthPotion = new hpPotion(20);
-            hpPotion lHealthPotion = new hpPotion (40);
+            hpPotion sHealthPotion = new hpPotion(10, "small");
+            hpPotion mHealthPotion = new hpPotion(20, "medium");
+            hpPotion lHealthPotion = new hpPotion (40, "large");
 
             //------------------------------testing adding potions to inventory
             
-            //Player.Inventory.Potions.Add(sHealthPotion);
+            Player.Inventory.Potions.Add(sHealthPotion);
+            Player.Inventory.Potions.Add(sHealthPotion);
+            Player.Inventory.Potions.Add(sHealthPotion);
 
             //Console.WriteLine(Player.Inventory.hpPotionCount(10));
 
@@ -32,7 +34,7 @@ namespace dotnet_test
 
             Console.WriteLine(Player.playerHealth);
 
-            sword LongSword = new sword(30);
+            sword LongSword = new sword(30, "Long Sword");
 
             Player.Inventory.Weapons.Add(LongSword);
 
@@ -44,8 +46,13 @@ namespace dotnet_test
             Player.attributes.speed = 5;
             Player.attributes.resistance = 20;
 
-            battle.startFight(Player, mGoblin);
+            //battle.startFight(Player, mGoblin);
+
+            Player.Inventory.displayWeapons();
             // alex is a doodoo head
+
+
+            Player.Inventory.displayPotions();
         }
     }
 }

@@ -6,20 +6,22 @@ namespace dotnet_test {
             while (true) {
                 double dmg; 
 
-                //---------------------- calls on the alive check method to make sure theyre alive before next turn starts
-                if (aliveCheck(player, Enemy) == "game over") {
-                    Console.WriteLine("You have died to and enemy {0}", Enemy.enemyName);
-                    break;
-                }
-
-                if (aliveCheck(player, Enemy) == "enemy defeated") {
-                    Console.WriteLine("you have defeated the enemy {0}", Enemy.enemyName);
-                    break;
-                }
 
                 //----------------------whoever has the larger speed stat attacks first each turn
 
                 if (player.attributes.speed > Enemy.enemySpeed) {
+                    
+                    //---------------------- calls on the alive check method to make sure theyre alive before next turn starts
+                    if (aliveCheck(player, Enemy) == "game over") {
+                        Console.WriteLine("You have died to and enemy {0}", Enemy.enemyName);
+                        break;
+                    }
+
+                    if (aliveCheck(player, Enemy) == "enemy defeated") {
+                        Console.WriteLine("you have defeated the enemy {0}", Enemy.enemyName);
+                        break;
+                    }
+
                     dmg = player.attack(0) - Enemy.enemyBlock(player.attack(0));
                     Enemy.enemyHealth = Enemy.enemyHealth - dmg;
 
@@ -73,6 +75,26 @@ namespace dotnet_test {
                 }
                 return null;
             } 
+        }
+
+        public static string choice(player player) {
+            string playerChoice;
+            Console.WriteLine("Whay will you do: [Attack] [Check Inventory]");
+
+            playerChoice = Console.ReadLine();
+
+            if (playerChoice == "attack") {
+                return playerChoice;
+            }
+
+            if (playerChoice == "check") {
+                player.Inventory.displayWeapons();
+                player.Inventory.displayPotions();
+                return null;
+            }
+            else {
+                return null;
+            }
         }
     }
 }
