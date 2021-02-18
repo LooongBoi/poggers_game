@@ -1,0 +1,32 @@
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test.deps.json
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test.runtimeconfig.json
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test.runtimeconfig.dev.json
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test.dll
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/ref/dotnet_test.dll
+/home/long_boi/Documents/vscode/dotnet_test/bin/Debug/net5.0/dotnet_test.pdb
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.csprojAssemblyReference.cache
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.GeneratedMSBuildEditorConfig.editorconfig
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.AssemblyInfoInputs.cache
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.AssemblyInfo.cs
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.csproj.CoreCompileInputs.cache
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.dll
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/ref/dotnet_test.dll
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.pdb
+/home/long_boi/Documents/vscode/dotnet_test/obj/Debug/net5.0/dotnet_test.genruntimeconfig.cache
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test.deps.json
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test.runtimeconfig.json
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test.runtimeconfig.dev.json
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test.dll
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/ref/dotnet_test.dll
+/home/long_boi/Documents/vscode/c# rpg new/bin/Debug/net5.0/dotnet_test.pdb
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.csprojAssemblyReference.cache
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.GeneratedMSBuildEditorConfig.editorconfig
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.AssemblyInfoInputs.cache
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.AssemblyInfo.cs
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.csproj.CoreCompileInputs.cache
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.dll
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/ref/dotnet_test.dll
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.pdb
+/home/long_boi/Documents/vscode/c# rpg new/obj/Debug/net5.0/dotnet_test.genruntimeconfig.cache
