@@ -90,7 +90,18 @@ namespace dotnet_test {
             if (playerChoice == "check") {
                 player.Inventory.displayWeapons();
                 player.Inventory.displayPotions();
-                return null;
+                
+                Console.WriteLine("\nWhat will you do: [Take Potion] [Change Weapon]");
+
+                playerChoice = Console.ReadLine();
+
+                if (playerChoice ==  "Take Potion") {
+
+                }
+
+                if (playerChoice == "Change Weapon") {
+
+                }
             }
             else {
                 return null;

@@ -4,6 +4,7 @@ namespace dotnet_test {
         public hpPotion(int hpamt, string typ) {
             type = typ;
             recoverAmount = hpamt;
+            Class = "health";
         }
     }
 }
