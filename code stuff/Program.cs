@@ -22,12 +22,11 @@ namespace dotnet_test
             Player.Inventory.Potions.Add(mHealthPotion);
             Player.Inventory.Potions.Add(lHealthPotion);
             Player.Inventory.Potions.Add(lHealthPotion);
-            Player.Inventory.Potions.Add(mHealthPotion);
+            Player.Inventory.Potions.Add(mHealthPotion); 
             Player.Inventory.Potions.Add(mHealthPotion);
 
 
             //Console.WriteLine(Player.Inventory.hpPotionCount(10));
-
             //------------------------------ testing playing with player attributes
             //int x;
 
@@ -38,7 +37,7 @@ namespace dotnet_test
 
             //------------------------------ testing player damage and attack
 
-            Console.WriteLine(Player.playerHealth);
+            Console.WriteLine(Player.Health);
 
             sword LongSword = new sword(30, "Long Sword");
 
@@ -52,7 +51,7 @@ namespace dotnet_test
             Player.attributes.speed = 5;
             Player.attributes.resistance = 20;
 
-            // battle.startFight(Player, mGoblin);
+            battle.startFight(Player, mGoblin);
 
             Player.Inventory.displayWeapons();
 

@@ -2,18 +2,19 @@ using System;
 
 namespace dotnet_test {
     class goblin : enemy {
-        public int enemyPotions;
+        public int Potions;
 
 
         public goblin(int swordDmg) {
-            enemyWeapon = new sword(swordDmg, "Short Sword");
-            enemyHealth = 60;
-            enemySpeed = 4;
-            enemyPotions = 3;
-            enemyName = "goblin";
+            Weapon = new sword(swordDmg, "Short Sword");
+            Health = 60;
+            Mana = 100;
+            Speed = 4;
+            Potions = 3;
+            Name = "goblin";
         }
 
-        public override double enemyBlock(int incomingDmg)
+        public override double Block(int incomingDmg)
         {
            return (randnm.Next(0, 50) * incomingDmg)/100; 
         }

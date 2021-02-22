@@ -1,17 +1,16 @@
 using System;
 
 namespace dotnet_test {
-    abstract class enemy {
-        public double enemyHealth;
-        public string enemyName;
-        public int enemySpeed;
-        public double enemyResistance;
-        public weapon enemyWeapon;
+    abstract class enemy : entity{
+        public string name;
+        public int speed;
+        public double Resistance;
+        public weapon weapon;
 
         //--------------random num for random block chance
         public Random randnm = new Random();
 
-        public abstract double enemyBlock(int incomingDmg);
+        public abstract double block(int incomingDmg);
 
     }
 }

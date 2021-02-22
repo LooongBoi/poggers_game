@@ -9,68 +9,70 @@ namespace dotnet_test {
 
                 //---------------------- whoever has the larger speed stat attacks first each turn
 
-                if (player.attributes.speed > Enemy.enemySpeed) {
+                if (player.attributes.speed > Enemy.Speed) {
                     
                     //---------------------- calls on the alive check method to make sure theyre alive before next turn starts
-                    if (aliveCheck(player, Enemy) == "game over") {
-                        Console.WriteLine("You have died to and enemy {0}", Enemy.enemyName);
-                        break;
-                    }
+            
+                    dmg = player.attack(0) - Enemy.Block(player.attack(0));
+                    Enemy.Health = Enemy.Health - dmg;
 
                     if (aliveCheck(player, Enemy) == "enemy defeated") {
-                        Console.WriteLine("you have defeated the enemy {0}", Enemy.enemyName);
+                        Console.WriteLine("you did {0} damage to the enemy {1} and it has perished, you have defeated the enemy {2}", dmg, Enemy.Name, Enemy.Name);
                         break;
                     }
 
-                    dmg = player.attack(0) - Enemy.enemyBlock(player.attack(0));
-                    Enemy.enemyHealth = Enemy.enemyHealth - dmg;
+                    Console.WriteLine("You dealt {0} damage to the enemy {1}, it has {2} health points remaining", dmg, Enemy.Name, Enemy.Health);
 
-                    Console.WriteLine("You dealt {0} damage to the enemy {1}", dmg, Enemy.enemyName);
+                    dmg = Enemy.Weapon.damage - player.playerblock(Enemy.Weapon.damage);
+                    player.Health = player.Health - dmg;
 
-                    dmg = Enemy.enemyWeapon.damage - player.playerblock(Enemy.enemyWeapon.damage);
-                    player.playerHealth = player.playerHealth - dmg;
+                    if (aliveCheck(player, Enemy) == "game over") {
+                        Console.WriteLine("You have died to and enemy {0}", Enemy.Name);
+                        break;
+                    }
 
-                    Console.WriteLine("The enemy {0} has dealt {1} damage to you. You have {2} health points remaining", Enemy.enemyName, dmg, player.playerHealth);
+                    Console.WriteLine("The enemy {0} has dealt {1} damage to you. You have {2} health points remaining", Enemy.Name, dmg, player.Health);
                   
                 }
                 else {
 
-                    if (aliveCheck(player, Enemy) == "game over") {
-                        Console.WriteLine("You have died to and enemy {0}", Enemy.enemyName);
-                        break;
-                    }
-
-                    if (aliveCheck(player, Enemy) == "enemy defeated") {
-                        Console.WriteLine("you have defeated the enemy {0}", Enemy.enemyName);
-                    }
+                    //---------------------- check if either player or enemy has died 
 
                 
                     // damage done to player = the damage of enemy weapon - the damage of enemy weapon * random block multiplier
-                    dmg = Enemy.enemyWeapon.damage - player.playerblock(Enemy.enemyWeapon.damage);
-                    player.playerHealth = player.playerHealth - dmg;
+                    dmg = Enemy.Weapon.damage - player.playerblock(Enemy.Weapon.damage);
+                    player.Health = player.Health - dmg;
 
-                    Console.WriteLine("The enemy {0} has dealt {1} damage to you. You have {2} health points remaining", Enemy.enemyName, dmg, player.playerHealth);
+                    if (aliveCheck(player, Enemy) == "game over") {
+                        Console.WriteLine("You have died to and enemy {0}", Enemy.Name);
+                        break;
+                    }
+
+                    Console.WriteLine("The enemy {0} has dealt {1} damage to you. You have {2} health points remaining", Enemy.Name, dmg, player.Health);
                     
-                    dmg = player.attack(0) - Enemy.enemyBlock(player.attack(0));
-                    Enemy.enemyHealth = Enemy.enemyHealth - dmg;
+                    dmg = player.attack(0) - Enemy.Block(player.attack(0));
+                    Enemy.Health = Enemy.Health - dmg;
 
-                    Console.WriteLine("You dealt {0} damage to the enemy {1}", dmg, Enemy.enemyName);
+                    if (aliveCheck(player, Enemy) == "enemy defeated") {
+                        Console.WriteLine("you have defeated the enemy {0}", Enemy.Name);
+                        break;
+                    }
 
-                    
-                    //---------------------- check if either player or enemy has died 
+                    Console.WriteLine("You dealt {0} damage to the enemy {1}", dmg, Enemy.Name);
+
 
                 }
             }
         } 
 
         public static string aliveCheck(player player, enemy Enemy) {
-            if (player.playerHealth <= 0.0) {
-                player.playerHealth = 0;
+            if (player.Health <= 0.0) {
+                player.Health = 0;
                 return "game over";
             }
             else {
-                if (Enemy.enemyHealth <= 0.0) {
-                    Enemy.enemyHealth = 0;
+                if (Enemy.Health <= 0.0) {
+                    Enemy.Health = 0;
                     return "enemy defeated";
                 }
                 return null;
@@ -108,4 +110,3 @@ namespace dotnet_test {
         }
     }
 }
-
