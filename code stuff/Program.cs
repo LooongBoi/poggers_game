@@ -14,15 +14,21 @@ namespace dotnet_test
             hpPotion mHealthPotion = new hpPotion(20, "medium");
             hpPotion lHealthPotion = new hpPotion (40, "large");
 
-            //------------------------------testing adding potions to inventory
+            //------------------------------ testing adding potions to inventory
             
             Player.Inventory.Potions.Add(sHealthPotion);
             Player.Inventory.Potions.Add(sHealthPotion);
-            Player.Inventory.Potions.Add(sHealthPotion);
+            Player.Inventory.Potions.Add(mHealthPotion);
+            Player.Inventory.Potions.Add(mHealthPotion);
+            Player.Inventory.Potions.Add(lHealthPotion);
+            Player.Inventory.Potions.Add(lHealthPotion);
+            Player.Inventory.Potions.Add(mHealthPotion);
+            Player.Inventory.Potions.Add(mHealthPotion);
+
 
             //Console.WriteLine(Player.Inventory.hpPotionCount(10));
 
-            //------------------------------testing playing with player attributes
+            //------------------------------ testing playing with player attributes
             //int x;
 
             //Console.WriteLine("please enter your strength points");
@@ -30,7 +36,7 @@ namespace dotnet_test
             //Player.attributes.strength = x;
             //Console.WriteLine(Player.attributes.strength);
 
-            //------------------------------testing player damage and attack
+            //------------------------------ testing player damage and attack
 
             Console.WriteLine(Player.playerHealth);
 
@@ -40,16 +46,15 @@ namespace dotnet_test
 
 
 
-            //------------------------------testing battles 
+            //------------------------------ testing battles 
 
             goblin mGoblin = new goblin(20);
             Player.attributes.speed = 5;
             Player.attributes.resistance = 20;
 
-            //battle.startFight(Player, mGoblin);
+            // battle.startFight(Player, mGoblin);
 
             Player.Inventory.displayWeapons();
-            // alex is a doodoo head
 
 
             Player.Inventory.displayPotions();

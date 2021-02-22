@@ -7,7 +7,7 @@ namespace dotnet_test {
                 double dmg; 
 
 
-                //----------------------whoever has the larger speed stat attacks first each turn
+                //---------------------- whoever has the larger speed stat attacks first each turn
 
                 if (player.attributes.speed > Enemy.enemySpeed) {
                     
@@ -57,7 +57,7 @@ namespace dotnet_test {
                     Console.WriteLine("You dealt {0} damage to the enemy {1}", dmg, Enemy.enemyName);
 
                     
-                    //----------------------check if either player or enemy has died 
+                    //---------------------- check if either player or enemy has died 
 
                 }
             }
@@ -96,12 +96,11 @@ namespace dotnet_test {
                 playerChoice = Console.ReadLine();
 
                 if (playerChoice ==  "Take Potion") {
-
                 }
 
                 if (playerChoice == "Change Weapon") {
-
                 }
+                return null;
             }
             else {
                 return null;
